@@ -1,0 +1,7 @@
+.listMessages{
+    overflow-y: auto;
+    height: 88vh;
+    border: 1px solid #c29999;
+    border-radius:9px;
+    margin-bottom: 5px;
+}
