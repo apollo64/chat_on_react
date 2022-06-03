@@ -1,26 +1,35 @@
 import React,{useEffect, useState} from 'react';
 import './ListMessages.css'
 import Message from './Message/Message'
+import {v4 as uuidv4} from 'uuid';
 
 export default ({messages})=>{
-    const [listMessages, setListMessages] = useState(messages)
+    
+    
 
     useEffect(()=>{
-        console.log('lets list message render through usefect')
-    },[])
-
-    return(
-        <div className="listMessages">
-        {messages.map((message)=> 
+        console.log('list message render through useefffect messages', messages)
         
+    },
+        [messages])
+    
+        return(
+        <div className="listMessages">
+        { messages.length>0 ? messages.map((message)=> 
+           
+
             <Message 
-            key={message.id}
+            key={uuidv4()}
             textMessage={message.message}
             author={message.author}
-            date={message.datetime} 
+            date={
+                message.datetime}
+             
+            
 
             />
-        )}
+            
+        ):null}
 
             
         </div>
