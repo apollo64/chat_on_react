@@ -1,7 +1,7 @@
 .formMessage {
-    position: fixed;
+    position: relative;
     bottom: 0;
     height: 10vh;
-    width: 90vh;
+    width: 100%;
     padding-bottom: 5px;
 }
